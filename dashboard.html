@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+</head>
+<body>
+    <nav>
+        <div class="waktu-user">
+            <h1 class="waktu"></h1>
+        </div>
+        <a href="">Informasi Bahan ajar</a>
+        <a href="">Tracking Pengiriman</a>
+        <div class="dropdown">
+            <button class="dropbtn">Laporan</button>
+                <div class="dropdown-content">
+                    <a href="#">Monitoring Progress DO Bahan Ajar</a>
+                    <a href="#">Rekap Bahan Ajar</a>
+                </div>
+        </div>
+        <a href=""></a>
+    </nav>
+    <main class="main-board">
+        <div class="main-title">
+            <h1 class="judul">Dashboard Aplikasi SITTA</h1>
+        </div>
+        <div class="search">
+            <button class="material-symbols-outlined">search</button>
+            <input type="text" placeholder="search something" class="search-input">
+        </div>
+        <section class="table-section">
+            <h2>Daftar Bahan Ajar</h2>
+                <table class="data-table" id="bahanAjarTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kode Lokasi</th>
+                        <th>Kode Barang</th>
+                        <th>Nama Barang</th>
+                        <th>Jenis</th>
+                        <th>Edisi</th>
+                        <th>Stok</th>
+                        <th>Cover</th>
+                    </tr>
+                 </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

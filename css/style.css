@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef1f5;
+}
+
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.title {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 30px;
+}
+
+.email-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #aaa;
+  border-radius: 50px;
+  padding: 10px 15px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.email-input span {
+  font-size: 20px;
+  color: #555;
+  margin-right: 10px;
+}
+
+.email-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.link-lupa{
+    font-size: 12px;
+    text-decoration: none;
+    align-self: flex-end;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.link-lupa:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+.button-msk {
+    align-items: center;
+    background-color: rgb(32, 137, 32);
+    border-radius: 50px;
+    border: none;
+    padding: 15px 15px;
+    font-weight: bold;
+}
+
+.button-msk:hover {
+    background-color: rgb(36, 96, 36);
+}
+
+.link-acc {
+    font-size: 12px;
+    margin-top: -10px;
+    text-decoration: none;
+}
+ .link-acc:hover{
+    text-decoration: underline;
+ }
