@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return
         }
 
-        if (emailInput && pwInput === "123456") {
+        if (emailInput && pwInput) {
             alert("Login berhasil!")
             window.location.href = "dashboard.html" 
          } else {
