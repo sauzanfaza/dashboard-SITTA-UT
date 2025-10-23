@@ -34,10 +34,15 @@ function tampilkanData(data) {
 })
 }
 
-tampilkanData(dataBahanajar)
+tampilkanData(dataBahanAjar)
 
-inputSearch.addEventListener("keyup", () => {
+inputSearch.addEventListener("keyup", function() {
   const keyword = this.value.toLowerCase().trim()
+
+  if(keyword === "") {
+    tampilkanData(dataBahanAjar)
+    return
+  }
 
   const hasil = dataBahanAjar.filter(
     buku => 
@@ -46,9 +51,12 @@ inputSearch.addEventListener("keyup", () => {
       buku.jenisBarang.toLowerCase().includes(keyword) ||
       buku.kodeLokasi.toLowerCase().includes(keyword) 
   )
-  .sort((a, b) =>
-  a.namaBarang.toLowerCase().indexOf(keyword) - b.namaBarang.toLowerCase().indexOf(keyword))
 
-  tampilkanData(hasil)
+  const nonHasil = dataBahanAjar.filter(
+    buku => !hasil.includes(buku)
+  )
+
+  const gabungan = [...hasil, ...nonHasil]
+  tampilkanData(gabungan)
 })
 
