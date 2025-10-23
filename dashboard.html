@@ -23,34 +23,22 @@
         </div>
         <a href=""></a>
     </nav>
-    <main class="main-board">
-        <div class="main-title">
-            <h1 class="judul">Dashboard Aplikasi SITTA</h1>
-        </div>
-        <div class="search">
-            <button class="material-symbols-outlined">search</button>
-            <input type="text" placeholder="search something" class="search-input">
-        </div>
-        <section class="table-section">
-            <h2>Daftar Bahan Ajar</h2>
-                <table class="data-table" id="bahanAjarTable">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Kode Lokasi</th>
-                        <th>Kode Barang</th>
-                        <th>Nama Barang</th>
-                        <th>Jenis</th>
-                        <th>Edisi</th>
-                        <th>Stok</th>
-                        <th>Cover</th>
-                    </tr>
-                 </thead>
-                <tbody></tbody>
-            </table>
-        </section>
-</main>
-<script src="data.js"></script>
+    <div class="slider">
+  <div class="slides" id="slides">
+    <div class="slide" style="background-image: url('/img/latar.jpg');"></div>
+    <div class="slide" style="background-image: url('/img/latar2.jpg');"></div>
+    <div class="slide" style="background-image: url('/img/latar3.jpg');"></div>
+    <div class="slide" style="background-image: url('/img/latar4.jpg');"></div>
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="text-helo">
+    <h1>Selamat Datang di Aplikasi SITTA</h1>
+    <p>“Bahan Ajar Digital, untuk Pembelajaran Tanpa Batas.”</p>
+  </div>
+</div>
+
 <script src="js/dashboard.js"></script>
 </body>
 </html>

@@ -1,6 +1,14 @@
 const container = document.getElementById('bahanAjarContainer');
+const inputSearch = document.getElementById('searchInput')
 
-dataBahanAjar.forEach(buku => {
+function tampilkanData(data) {
+  container.innerHTML = ""
+
+  if(data.length === 0) {
+    container.innerHTML = "<p style='text-align:center'> Data tidak ditemukan.</p>"
+    return
+  }
+  data.forEach(buku => {
   const card = document.createElement('div');
   card.className = 'card';
 
@@ -23,4 +31,24 @@ dataBahanAjar.forEach(buku => {
   card.appendChild(info);
   card.appendChild(cover);
   container.appendChild(card);
-});
+})
+}
+
+tampilkanData(dataBahanajar)
+
+inputSearch.addEventListener("keyup", () => {
+  const keyword = this.value.toLowerCase().trim()
+
+  const hasil = dataBahanAjar.filter(
+    buku => 
+      buku.namaBarang.toLowerCase().includes(keyword) ||
+      buku.kodeBarang.toLowerCase().includes(keyword) ||
+      buku.jenisBarang.toLowerCase().includes(keyword) ||
+      buku.kodeLokasi.toLowerCase().includes(keyword) 
+  )
+  .sort((a, b) =>
+  a.namaBarang.toLowerCase().indexOf(keyword) - b.namaBarang.toLowerCase().indexOf(keyword))
+
+  tampilkanData(hasil)
+})
+

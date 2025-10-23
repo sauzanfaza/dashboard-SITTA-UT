@@ -5,6 +5,13 @@ body {
   padding: 20px;
 }
 
+.navbar{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px 20px;
+}
+
 h1 {
   text-align: center;
   color: #333;
@@ -56,4 +63,29 @@ h1 {
     width: 100%;
     height: auto;
   }
+}
+
+.search {
+  display: flex;
+  border: 1px solid #aaa;
+  border-radius: 50px;
+  margin-top: 10px;
+  padding: 15px 15px;
+  align-items: center;
+}
+
+.search button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.search-input{
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  padding-left: 10px;
+  width: 300px;
+  background-color: transparent;
 }

@@ -1,14 +1,16 @@
-//waktu sapaan untuk user
 const now = new Date()
 const hour = now.getHours()
+const slides = document.getElementById('slides')
+const totalSlides = document.querySelectorAll('.slide').length
 
+let index = 0
 let waktuSapaan 
 
 if(hour >= 5 && hour < 12) {
   waktuSapaan = "Selamat Pagi "
-} else if( hour >= 12 && hour < 15){
+} else if(hour >= 12 && hour < 15){
   waktuSapaan = "Selamat Siang "
-} else if( hour >= 15 && hour < 18) {
+} else if(hour >= 15 && hour < 18) {
   waktuSapaan = "Selamat Sore "
 } else {
   waktuSapaan = "Selamat Malam "
@@ -16,20 +18,10 @@ if(hour >= 5 && hour < 12) {
 
 document.querySelector(".waktu").innerHTML = waktuSapaan;
 
-// data tabel
-const tableBody = document.querySelector("#bahanAjarTable tbody");
+function showNextSlide(){
+  index++
+  if(index >= totalSlides) index = 0
+  slides.style.transform = `translateX(-${index * 100}%)`
+}
 
-dataBahanAjar.forEach((item, index) => {
-  const row = document.createElement("tr");
-  row.innerHTML = `
-    <td>${index + 1}</td>
-    <td>${item.kodeLokasi}</td>
-    <td>${item.kodeBarang}</td>
-    <td>${item.namaBarang}</td>
-    <td>${item.jenisBarang}</td>
-    <td>${item.edisi}</td>
-    <td>${item.stok}</td>
-    <td><img src="${item.cover}" alt="${item.namaBarang}" width="50"></td>
-  `;
-  tableBody.appendChild(row);
-});
+setInterval(showNextSlide, 4000)
