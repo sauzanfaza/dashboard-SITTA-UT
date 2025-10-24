@@ -84,8 +84,8 @@ nav a:hover {
 }
 
 .slides {
-  display: flex;               /* geser horizontal */
-  width: 100%;                 /* 4 slide = 400% */
+  display: flex;               
+  width: 100%;              
   height: 100vh;
   transition: transform 3s ease;
 }
@@ -93,7 +93,7 @@ nav a:hover {
 .slide {
   width: 100%;
   height: 100vh;
-  background-size: cover;   /* biar gambar tampil full tanpa zoom */
+  background-size: cover;   
   background-position: center;
   flex-shrink: 0;
 }
