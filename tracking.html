@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking Bahan Ajar</title>
+  <link rel="stylesheet" href="/css/tracking.css">
+  
+</head>
+<body>
+  <nav>
+    <h2>Tracking Pengiriman Bahan Ajar</h2>
+  </nav>
+
+  <main class="container">
+    <div class="search-box">
+      <label for="nomorDO">Masukkan Nomor Delivery Order:</label>
+      <input type="text" id="nomorDO" placeholder="Contoh: 2023001234">
+      <button id="btnCari">Cari</button>
+    </div>
+
+    <div id="hasilTracking" class="result-box"></div>
+  </main>
+  <script src="data.js" defer></script>
+  <script src="/js/trackig.js" defer></script>
+</body>
+</html>
